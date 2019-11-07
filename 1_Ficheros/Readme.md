@@ -155,9 +155,13 @@ NOTA: Todas las operaciones se harán en la lista, solo se debe leer del fichero
 5. Salir
 
 La opción 0 muestra desde la lista todos los elementos de la lista.
+
 La opción 1 te pide el ID de un elemento y tras ello muestra los datos de ese elemento y a través de un menú permite modificar alguno de los campos disponibles (nombre y dirección).
+
 Las opciones 2 y 3 buscan dentro de la lista por nombre/dirección (el usuario es preguntado por el nombre/dirección).
+
 La opción 4 pide un ID (posición en la lista) y muestra dicho elemento. En caso de no existir debe indicarsele al usuario ( ```si(idElegido > lista.Count) entonces mostrar mensaje de error```)
+
 La opción 5 pregunta si deseas guardar los cambios realizados, en caso afirmativo por parte del usuario se guardan los cambios y sale del programa.
 
 # Bibliografía
