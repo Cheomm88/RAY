@@ -137,9 +137,10 @@ Console.WriteLine("Persona en la pos 1 de la lista: " + personas[1].nombre);
 El while debe ser parecido al que sale [al final del ejemplo 2](https://github.com/Cheomm88/RAY/blob/54d0a45aa8f90f4cfda3dab78847acc617b0d8f0/1_Ficheros/2_FicherosRegistros/FicheroRegistros/Program.cs#L58).
 
 Modificar el Ejemplo 2 para que:
+
 0 Eliminar que se almacene el ID en el fichero.
 
-1 Exista un menu que permita mostrar todos los registros (cargamos en una Lista), añadir un nuevo elemento, modificar un elemento, buscar por nombre.
+1 Exista un menu que permita mostrar todos los registros (cargamos en una Lista), añadir un nuevo elemento, modificar un elemento, buscar por nombre y añadir un elemento.
 
 2 Actualizar el fichero de información (supone sobreescribir el fichero que tenía los datos y almacenar los registros que están en la lista).
 
@@ -148,21 +149,24 @@ NOTA: Todas las operaciones se harán en la lista, solo se debe leer del fichero
 #### Ejemplo de Menú
 
 0. Mostrar todos los accesos
-1. Modificar un elemento
-2. Buscar por nombre.
-3. Buscar por dirección.
-4.  Ver acceso por ID.
-5. Salir
+1. Añadir elemento
+2. Modificar un elemento
+3. Buscar por nombre.
+4. Buscar por dirección.
+5. Ver acceso por ID.
+6. Salir
 
 La opción 0 muestra desde la lista todos los elementos de la lista.
 
-La opción 1 te pide el ID de un elemento y tras ello muestra los datos de ese elemento y a través de un menú permite modificar alguno de los campos disponibles (nombre y dirección).
+La opción 1 permite añadir nuevos elementos al final de la lista, para posteriormente almacenarlos en un fichero.
 
-Las opciones 2 y 3 buscan dentro de la lista por nombre/dirección (el usuario es preguntado por el nombre/dirección).
+La opción 2 te pide el ID de un elemento y tras ello muestra los datos de ese elemento y a través de un menú permite modificar alguno de los campos disponibles (nombre y dirección).
 
-La opción 4 pide un ID (posición en la lista) y muestra dicho elemento. En caso de no existir debe indicarsele al usuario ( ```si(idElegido > lista.Count) entonces mostrar mensaje de error```)
+Las opciones 3 y 4 buscan dentro de la lista por nombre/dirección (el usuario es preguntado por el nombre/dirección).
 
-La opción 5 pregunta si deseas guardar los cambios realizados, en caso afirmativo por parte del usuario se guardan los cambios y sale del programa.
+La opción 5 pide un ID (posición en la lista) y muestra dicho elemento. En caso de no existir debe indicarsele al usuario ( ```si(idElegido > lista.Count) entonces mostrar mensaje de error```)
+
+La opción 6 pregunta si deseas guardar los cambios realizados, en caso afirmativo por parte del usuario se guardan los cambios y sale del programa.
 
 # Bibliografía
 [Datos de tipo Bool](https://docs.microsoft.com/es-es/dotnet/csharp/language-reference/keywords/bool)
