@@ -147,12 +147,12 @@ NOTA: Todas las operaciones se harán en la lista, solo se debe leer del fichero
 
 #### Ejemplo de Menú
 
-0 - Mostrar todos los accesos
-1 - Modificar un elemento
-2 - Buscar por nombre.
-3 - Buscar por dirección.
-4 - Ver acceso por ID.
-5 - Salir
+0. Mostrar todos los accesos
+1. Modificar un elemento
+2. Buscar por nombre.
+3. Buscar por dirección.
+4.  Ver acceso por ID.
+5. Salir
 
 La opción 0 muestra desde la lista todos los elementos de la lista.
 La opción 1 te pide el ID de un elemento y tras ello muestra los datos de ese elemento y a través de un menú permite modificar alguno de los campos disponibles (nombre y dirección).
