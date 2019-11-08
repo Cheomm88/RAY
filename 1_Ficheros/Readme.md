@@ -96,7 +96,7 @@ Viendo el código encontrarás comentarios que servirán de ayuda para las modif
 
 - Preguntar al usuario el nombre del fichero de texto que se desea crear/leer.
 - Trabajar sobre el fichero que el usuario ha indicado.
-- Permitir desde el menú una opción para cambiar de fichero.
+- Permitir desde el menú una opción para cambiar de fichero, al inciar el programa se pregunta por el fichero inicial. Si el usuario quiere cambiar de fichero hará uso de esta opción.
 - Seleccionar el modo de escritura (sobre-escribir el fichero por completo, añadir texto al final del mismo)
 
 
