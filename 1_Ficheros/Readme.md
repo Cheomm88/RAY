@@ -171,10 +171,10 @@ La opción 6 pregunta si deseas guardar los cambios realizados, en caso afirmati
 
 
 #### Consejos para hacer la actividad 2
-1 - Modificar el código para primero mostrar el menú.
-2 - Crear una función que se llema antes del menú y carga los registros de un fichero. (El programa crea el fichero y lo cierra, para posteriormente leerlo. Al crearlo se crea con el boolean a true).
-3- Con el código de más arriba tienes el ejemplo de como ir cargando los registros.
-4- Una vez tienes los registros cargados la primera opción a realizar debe ser la de mostrar los elementos de la lista.
+1.  Modificar el código para primero mostrar el menú.
+2. Crear una función que se llema antes del menú y carga los registros de un fichero. (El programa crea el fichero y lo cierra, para posteriormente leerlo. Al crearlo se crea con el boolean a true).
+3. Con el código de más arriba tienes el ejemplo de como ir cargando los registros.
+4. Una vez tienes los registros cargados la primera opción a realizar debe ser la de mostrar los elementos de la lista.
 
 # Bibliografía
 [Datos de tipo Bool](https://docs.microsoft.com/es-es/dotnet/csharp/language-reference/keywords/bool)
