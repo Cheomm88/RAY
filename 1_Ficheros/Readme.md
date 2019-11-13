@@ -168,6 +168,14 @@ La opción 5 pide un ID (posición en la lista) y muestra dicho elemento. En cas
 
 La opción 6 pregunta si deseas guardar los cambios realizados, en caso afirmativo por parte del usuario se guardan los cambios y sale del programa.
 
+
+
+#### Consejos para hacer la actividad 2
+1 - Modificar el código para primero mostrar el menú.
+2 - Crear una función que se llema antes del menú y carga los registros de un fichero. (El programa crea el fichero y lo cierra, para posteriormente leerlo. Al crearlo se crea con el boolean a true).
+3- Con el código de más arriba tienes el ejemplo de como ir cargando los registros.
+4- Una vez tienes los registros cargados la primera opción a realizar debe ser la de mostrar los elementos de la lista.
+
 # Bibliografía
 [Datos de tipo Bool](https://docs.microsoft.com/es-es/dotnet/csharp/language-reference/keywords/bool)
 [Documentación ficheros](https://studylib.es/doc/7096513/guia%2312--tema--%E2%80%9Carchivos-en-c%23%E2%80%9D)
