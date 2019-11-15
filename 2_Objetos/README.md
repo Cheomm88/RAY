@@ -72,3 +72,8 @@ Saldrá una nueva ventana donde debemos crear una nueva clase de C#, ahora a la 
 
 
 
+En Class1.cs ahora podremos introducir el código de nuestro ejemplo, recuerda cambiar el nombre de la clase que aparece que es ``Class1`` por ``Transport`` y dejarla como ``public``.
+
+![Explorador de Soluciones](https://raw.githubusercontent.com/Cheomm88/RAY/master/2_Objetos/Imagenes/clase.png )
+
+Ahora mismo si ejecutamos no veremos nada, solo un mensaje de "Hello World!" creado desde **Program.cs** en la función ``Main`` y es que desde ``Main`` funciona todo el programa y así debemos tratar de mantenerlo.
