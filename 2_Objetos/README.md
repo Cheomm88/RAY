@@ -68,4 +68,4 @@ Para crear una clase en nuestro proyecto iremos a la barra de herramientas y sel
 
 Saldrá una nueva ventana donde debemos crear una nueva clase de C#, ahora a la derecha en el explorador de soluciones encontramos dos ficheros.
 
-![](https://github.com/cheomm88/RAY/2_Objetos/Imagenes/explorador.png)
+![](https://github.com/Cheomm88/RAY/2_Objetos/Imagenes/explorador.png)
