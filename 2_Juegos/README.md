@@ -46,3 +46,43 @@ Podrías querer añadir en alguno de estos juegos la posibilidad de calcular el 
 ```
 
 Puedes ver un [ejemplo](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.elapsed?view=netframework-4.8#examples) de como mostrar segundos o minutos en ese enlace.
+
+
+## Cambiar colores de la consola
+
+En el siguiente ejemplo puedes ver como cambiar el color de la consola para 
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        //
+        // Write one green line.
+        //
+        WriteFullLine("This line is green.");
+        Console.WriteLine();
+        //
+        // Write another green line.
+        //
+        WriteFullLine("This line is also green.");
+        Console.WriteLine();
+    }
+
+    static void WriteFullLine(string value)
+    {
+        //
+        // This method writes an entire line to the console with the string.
+        //
+        Console.BackgroundColor = ConsoleColor.Green;
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine(value.PadRight(Console.WindowWidth - 1)); // <-- see note
+        //
+        // Reset the color.
+        //
+        Console.ResetColor();
+    }
+}
+```
