@@ -20,10 +20,12 @@ Los operandos se calculan de forma aleatorio esto es posible a través de la Cla
 
 Mientras que el número más pequeño será cero, el juego irá aumentando la dificultad en base a los aciertos
 
-Aciertos | Numero mayor
- 0 - 10 | 10 
- 11- 19 | 15 
- 20 - 29 | 20 
+| Aciertos | Número máximo |
+| ------------- | ------------- |
+| 0 - 10 | 10 |
+| 11- 19 | 15 |
+| 20 - 29 | 20 |
+
 
 
 
