@@ -1,33 +1,73 @@
 # Juegos Matemáticos
 En este apartado vamos a hacer uso de los aprendido hasta ahora para crear varios juegos matemáticos.
 
-# Velocidad de cálculo de sumas
-En este juego de sumas lo que se realizará será mostrar los dos operandos y un igual, el programa queda a la espera de la respuesta del usuario.
+# Seguridad cibernética
+Desarrollar un juego basado en número, en el cuál el jugador deberá descubrir el patrón de números que proteje un servidor con datos muy importantes, así como la encriptación.
 
-Por ejemplo:
-> 4 + 5 =
 
-El usuario pulsará 9 y Enter, al ser el resultado correcto de la suma se mostrará el Acierto y la siguiente pregunta matemática
-> 4 + 5 = 9
->
-> 8 + 4 = 
+
+Ejemplo de la partida:
+> Radio: Tenemos unas pistas sobre el acceso a este sistema.
+> El código está formado por tres dígitos.
+> La suma de estos tres dígitos da 8
+> La multiplicación de los tres dígitos da  16
+> Te dejamos el tiempo que necesites, por favor no falles o toda la operación se irá al traste.
+> Escribe el primer número
+> 2
+> Escribe el segundo número
+>2
+> Escribe el tercer número
+>4
+> ...
+> ...
+> Radio: Uff ha estado cerca!! 
+> Radio: Bien!! Ya queda menos... Vamos a descargar esos datos...
+> Radio: Ups... Están encriptados, esto va a estar más complicado de lo que parecía...
+
+(La historia la puedes modificar como tu quieras, se trata de adivinar los 3 números que hagan que las operaciones funcionen).
+
+El orden de los números de debería afectar puesto que la suma y la multiplicación tienen la propiedad de que el orden de los factores no afecta al resultado final.
+Por otro lado podría suceder que un problema tenga varias soluciones es por ello que lo que haremos será comprobar que el resultado de las operaciones es el mismo y no los números. El código sería similar al siguiente
+```csharp
+	Random generadorNumeros = new Random();
+	int a = generadorNumeros.Next(0, 10 + Nivel); 
+	int b = generadorNumeros.Next(0, 10 + Nivel); 
+	int b = generadorNumeros.Next(0, 10 + Nivel); 
+	
+	int userA = Convert.ToInt32(Console.ReadLine());
+	int userB = Convert.ToInt32(Console.ReadLine());
+	int userC = Convert.ToInt32(Console.ReadLine());
+	
+	if((a + b +c == userA+ userB + userC) && (a + b +c == userA+ userB + userC))
+	{
+		//Pasar al siguiente nivel....
+	}
+	else
+	{
+		//Mostrar mensaje de muerte.
+	}
+```
+
 
 Los operandos se calculan de forma aleatorio esto es posible a través de la Clase ```Random```
 
-```csharp
-	Random generadorNumeros = new Random();
-	int numeroAleatorio = generadorNumeros.Next(0, 100); //0 el número más pequeño y 100 el más grande
-```
 
-Mientras que el número más pequeño será cero, el juego irá aumentando la dificultad en base a los aciertos, se irá guardando la cantidad de aciertos.
-En caso de superar el número de aciertos de un nivel la dificultad se aumenta en base a la tabla anexa.
 
-| Aciertos | Número máximo |
+Mientras que el número más pequeño será cero, el juego irá aumentando la dificultad en base a los aciertos.
+
+A continuación se tiene la tabla del nivel y la dificultad (un nivel será un acertijo) .
+
+| Nivel | Número máximo |
 | ------------- | ------------- |
-| 0 - 10 | 10 |
-| 11- 19 | 15 |
-| 20 - 29 | 20 |
-| 30 - 39 | 30 |
+| 0 | 5 |
+| 1 | 10 |
+| 2 | 15 |
+| 3 | 20 |
+| 4 | 25 |
 
-Una vez cometido un error, se motrará la cantidad de aciertos 
+* Una vez cometido un error, se mostrará un mensaje de error.
+* Cada vez que se acierta se avanza al siguiente nivel donde la historia es libre.
+* Puedes crear tantos niveles como quieras y por tanto historia, el mínimo son 4 niveles.
+
+
 
