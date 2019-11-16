@@ -9,6 +9,7 @@ Por ejemplo:
 
 El usuario pulsará 9 y Enter, al ser el resultado correcto de la suma se mostrará el Acierto y la siguiente pregunta matemática
 > 4 + 5 = 9
+>
 > 8 + 4 = 
 
 Los operandos se calculan de forma aleatorio esto es posible a través de la Clase ```Random```
