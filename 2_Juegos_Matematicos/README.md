@@ -45,4 +45,4 @@ Podrías querer añadir en alguno de estos juegos la posibilidad de calcular el 
 	Console.WriteLine("Tiempo de juego " + elapsed_time);
 ```
 
-Puedes ver un (ejemplo)[https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.elapsed?view=netframework-4.8#examples] de como mostrar segundos o minutos en ese enlace.
+Puedes ver un [ejemplo](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.elapsed?view=netframework-4.8#examples) de como mostrar segundos o minutos en ese enlace.
