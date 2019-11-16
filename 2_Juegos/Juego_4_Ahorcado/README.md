@@ -3,6 +3,8 @@ En esta actividad vamos a crear el juego del ahorcado, habrá un máximo de inte
 
 El jugador 1 escribe una palabra y el jugador 2 tendrá que acertarla.
 Una vez el jugador 2 ha acertado o superado el número de intentos, podrá escribir una palabra para que el jugador 1 la descubra.
+El máximo número de intentos fallidos por un jugador será el número de letras de la palabra.
+
 
 Al salir del juego se muestra el resultado final de turnos ganados por cada usuario.
 
@@ -10,30 +12,50 @@ Al salir del juego se muestra el resultado final de turnos ganados por cada usua
 ## Ejemplo de partida
 
 > Turno jugador 1: Escriba la palabra.
+>
 > PALABRA
 
 Se borra la pantalla
 
 > _ _ _ _ _ _ _ 
+>
 > Intentos restantes 4
+>
 > 1 - Resolver
+>
 > 2 - Letra
+>
 > 3 - Salir
+>
 > Escriba su opción
+>
 > 2
+>
 > ¿Qué letra?
+>
 > a
+
+
 Se borra la pantalla
 
 > _ A _ A _ _ A 
-> Intentos restantes 3
+>
+> Intentos restantes 4
+>
 > 1 - Resolver
+>
 > 2 - Letra
+>
 > 3 - Salir
+>
 > Escriba su opción
+>
 > 1
+>
 > Escriba su palabra
+>
 > anaconda
+>
 > La palabra correcta era 'palabra' y no anaconda.
 
 Se limpia la pantalla
