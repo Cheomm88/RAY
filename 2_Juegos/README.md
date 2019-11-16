@@ -9,6 +9,8 @@ En este juego las operaciones matemáticas van cambiando así como el número a 
 ## Seguridad cibernética
 Este hacker necesita habilidad mental para descrifrar la clave y escapar con la información sin ser detectado.
 
+## Ahorcado
+El clásico juego del ahorcado una persona elige una palabra y el otro tiene que descubrirla.
 
 # Código útil para realizar los programas.
 
