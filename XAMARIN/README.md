@@ -15,8 +15,6 @@ Hasta ahora todo el código venía en un solo fichero, o en varias clases.... En
 
 Dónde encontraremos muchos cambios será en los ficheros de visualización esos que acaban en   **.xaml.cs**, esta clase de lenguajes son denominados lenguajes de marcas, tienen cosas parecidas a lo que hemos visto hasta ahora como los parámetros, toda marca tienen un inicio y un final... y No mucho más.
 
-
-
 Vamos a utilizar el [ejemplo de Microsoft](https://docs.microsoft.com/es-es/xamarin/xamarin-forms/xaml/xaml-basics/get-started-with-xaml?tabs=windows ) para explicar como funciona XAML. Este será nuestro primer fichero de vista nada más crear un proyecto vacío:
 
 ```xaml
@@ -54,5 +52,5 @@ Finalmente encontramos
 </ContentPage>
 ```
 
-Que indican que se ha acabado la interfaz de Pila (`StackLayout`) y la página (`ContentLayout`).
+Que indican que se ha acabado la interfaz de Pila (`StackLayout`) y la página (`ContentLayout`) por eso tienen una `/ `en el tag de xaml.
 
