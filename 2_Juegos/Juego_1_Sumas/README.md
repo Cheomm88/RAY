@@ -29,5 +29,5 @@ En caso de superar el número de aciertos de un nivel la dificultad se aumenta e
 | 20 - 29 | 20 |
 | 30 - 39 | 30 |
 
-Una vez cometido un error, se motrará la cantidad de aciertos 
+Una vez cometido un error, se mostrará la cantidad de aciertos.
 
