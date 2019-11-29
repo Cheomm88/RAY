@@ -33,6 +33,7 @@ Una vez cometido un error, se mostrará la cantidad de aciertos.
 
 # Extras
 * Evitar que si el usuario pulsa enter vacio o sin números el juego se rompa.
+* Evitar que si el usuario escribe texto en vez de un número el juego se rompa (esto requiere de usar las funciones de try catch).
 * Permitir al usuario elegir un número de vidas al ejecutar el juego: al iniciar el programa se le pregunta por el número de vidas que desea tener y permite al usuario tener ese número de errores antes de morir.
 * A través de una función que permita seguir escalando de niveles/dificultad sin tener que definir uno a uno cada nivel (subiendo 10 unidades el número mayor posible).
 * Mostrar al final de la partida el tiempo jugado.
