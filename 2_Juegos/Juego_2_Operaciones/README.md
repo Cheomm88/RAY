@@ -16,6 +16,7 @@ Por ejemplo:
 Las operaciones serán de forma aleatoria es posible que salgan las siguientes operaciones: la suma, la resta, la multiplicación y la división. Para ello podremos generar un número aleatorio y considerar que según el número podrá ser una u otra operación.
 
 Por ejemplo
+
 | Numero | Operación |
 | ------------- | ------------- |
 | 0 | + |
