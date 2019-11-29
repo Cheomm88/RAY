@@ -35,4 +35,6 @@ Una vez cometido un error, se mostrará la cantidad de aciertos.
 * Evitar que si el usuario pulsa enter vacio o sin números el juego se rompa.
 * Permitir al usuario elegir un número de vidas al ejecutar el juego: al iniciar el programa se le pregunta por el número de vidas que desea tener y permite al usuario tener ese número de errores antes de morir.
 * A través de una función que permita seguir escalando de niveles/dificultad sin tener que definir uno a uno cada nivel (subiendo 10 unidades el número mayor posible).
+* Mostrar al final de la partida el tiempo jugado.
+* Mostrar aciertos en verde y errores en rojo.
 
