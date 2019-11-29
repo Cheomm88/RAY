@@ -25,14 +25,14 @@ En caso de superar el número de aciertos de un nivel la dificultad se aumenta e
 | Aciertos | Número máximo |
 | ------------- | ------------- |
 | 0 - 10 | 10 |
-| 11- 19 | 15 |
+| 11 - 19 | 15 |
 | 20 - 29 | 20 |
 | 30 - 39 | 30 |
 
 Una vez cometido un error, se mostrará la cantidad de aciertos.
 
 # Extras
-Evitar que si el usuario pulsa enter vacio o sin números el juego se rompa.
-Permitir al usuario elegir un número de vidas al ejecutar el juego: al iniciar el programa se le pregunta por el número de vidas que desea tener y permite al usuario tener ese número de errores antes de morir.
-A través de una función que permita seguir escalando de niveles/dificultad sin tener que definir uno a uno cada nivel.
+* Evitar que si el usuario pulsa enter vacio o sin números el juego se rompa.
+* Permitir al usuario elegir un número de vidas al ejecutar el juego: al iniciar el programa se le pregunta por el número de vidas que desea tener y permite al usuario tener ese número de errores antes de morir.
+* A través de una función que permita seguir escalando de niveles/dificultad sin tener que definir uno a uno cada nivel (subiendo 10 unidades el número mayor posible).
 
