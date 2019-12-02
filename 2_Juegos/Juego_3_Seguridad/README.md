@@ -70,4 +70,8 @@ A continuación se tiene la tabla del nivel y la dificultad (un nivel será un a
 * Puedes crear tantos niveles como quieras y por tanto historia, el mínimo son 4 niveles.
 
 
-
+# Extras
+* Evitar que si el usuario pulsa enter vacio o sin números el juego se rompa.
+* Crear un sistema en el que los niveles se generen de forma aleatoria.
+* Tener diferentes mesajes de cierre de la historia/partida seleccionados de forma aleatoria.
+* Tener dos historias.
