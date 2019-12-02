@@ -74,4 +74,5 @@ A continuación se tiene la tabla del nivel y la dificultad (un nivel será un a
 * Evitar que si el usuario pulsa enter vacio o sin números el juego se rompa.
 * Crear un sistema en el que los niveles se generen de forma aleatoria.
 * Tener diferentes mesajes de cierre de la historia/partida seleccionados de forma aleatoria.
-* Tener dos historias.
+* Tener dos historias dentro del juego, se pueden elegir al iniciar la partida. (Por ejemplo CiberHacker y Asalto al banco). Sólo cambian los textos, las reglas del juego son las mismas.
+ 
