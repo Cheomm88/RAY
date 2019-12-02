@@ -52,4 +52,7 @@ Una vez cometido un error, se motrará la cantidad de aciertos
 * Evitar que si el usuario pulsa enter vacio o sin números el juego se rompa.
 * Permitir al usuario elegir un número de vidas al ejecutar el juego: al iniciar el programa se le pregunta por el número de vidas que desea tener y permite al usuario tener ese número de errores antes de morir.
 * A través de una función que permita seguir escalando de niveles/dificultad sin tener que definir uno a uno cada nivel (subiendo 5 unidades el número mayor posible).
+* En un fichero de texto almacenar Nombre del jugador y record. Se almacenarán en el fichero solo los 3 mejores.
+* Mostrar al final de la partida el tiempo de partida, número de operaciones realizadas, aciertos, fallos y % de acierto.
+
 
