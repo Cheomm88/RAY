@@ -94,3 +94,13 @@ Se borra la pantalla y vuelve a jugar en este caso el jugador 1 trata de descubr
 //Acceso a una letra 
 palabraCifrada[i] = 'B';
 ```
+
+# Extras
+
+* El juego no da errores al introducir texto no experado (gameplay y menús).
+* El juego reconoce cuando es una letra o una palabra y ejecuta el resolver palabra o letra en base a eso.
+* El juego no diferencia entre mayúsculas y minúsculas.
+* Sistema de turnos, al empezar el juego se pregunta el número de jugadores. Y se van turnando los jugadores que tratan de adivinar la palabra.
+* Cada jugador sumará puntos al acertar una letra (1 punto) y al resolver la palabra 3 puntos).
+* Economía de juego: para usar vocales es necesario tener puntos, una vocal cuesta dos puntos. Al elegir una vocal se reducen dos puntos del jugador.
+
