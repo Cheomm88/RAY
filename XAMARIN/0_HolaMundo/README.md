@@ -6,9 +6,9 @@ Pasamos al desarrollo de aplicaciones multiplataforma para móvil, hasta ahora t
 
 ## Básicos de Xamarin Forms
 
-Hasta ahora todo el código venía en un solo fichero, o en varias clases.... En Xamarin Forms vamos a encontrar al menos dos tipos de ficheros donde nosotros haremos cosas, tenemos ficheros de visualización de información que serán los que tienen por extensión **.xaml.cs** y los que tienen el código que se ejecuta que tienen por extensión **.cs**, los ficheros de código tienen una sintáxis muy parecida a la que hemos visto ahora ahora (if, bucles, variables, funciones...).
+Hasta ahora todo el código venía en un solo fichero, o en varias clases.... En Xamarin Forms vamos a encontrar al menos dos tipos de ficheros donde nosotros haremos cosas, tenemos ficheros de visualización de información que serán los que tienen por extensión **.xaml** y los que tienen el código que se ejecuta que tienen por extensión **xaml.cs**, los ficheros de código tienen una sintáxis muy parecida a la que hemos visto ahora ahora (if, bucles, variables, funciones...).
 
-Dónde encontraremos muchos cambios será en los ficheros de visualización esos que acaban en   **.xaml.cs**, esta clase de lenguajes son denominados lenguajes de marcas, tienen cosas parecidas a lo que hemos visto hasta ahora como los parámetros, toda marca tienen un inicio y un final... y No mucho más.
+Dónde encontraremos muchos cambios será en los ficheros de visualización esos que acaban en   **.xaml**, esta clase de lenguajes son denominados lenguajes de marcas, tienen cosas parecidas a lo que hemos visto hasta ahora como los parámetros, toda marca tienen un inicio y un final... y No mucho más.
 
 Vamos a utilizar el [ejemplo de Microsoft](https://docs.microsoft.com/es-es/xamarin/xamarin-forms/xaml/xaml-basics/get-started-with-xaml?tabs=windows ) para explicar como funciona XAML. Este será nuestro primer fichero de vista nada más crear un proyecto vacío:
 
@@ -40,6 +40,16 @@ Los parámetros sirven para diferentes funciones, permiten poner texto o modific
 * `VerticalOptions`   modifica cómo el elemento se presenta cuando hay espacio disponible en el eje Y 
 * `HorizontalOptions`    modifica cómo el elemento se presenta cuando hay espacio disponible en el eje X
 
+Podríamos añadir un nuevo parámetro quedando de la siguiente manera
+```xaml
+        <Label x:Name="hiddenText"
+			   Text="Welcome to Xamarin Forms!"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+```
+El atributo ```x:Name``` no permitirá acceder de manera automática desde el código a esta etiqueta y modificar su texto, utilizando directamente el nombre eledigo en este caso ha sido denominado ```hiddenText```. 
+Por lo que podríamos cambiar el texto utilizando ```hiddenText.Text="Nuevo texto"``` en nuestro fichero de código.
+
 Finalmente encontramos 
 
 ```xaml
@@ -49,3 +59,4 @@ Finalmente encontramos
 
 Que indican que se ha acabado la interfaz de Pila (`StackLayout`) y la página (`ContentLayout`) por eso tienen una `/ `en el tag de xaml.
 
+Es posible ver como está quedando la pantalla que estamos creando dentro del propio Visual Studio sin necesidad de ejecutar el emulador para ello basta con utilizar la vista de diseño (Shift + F7).
