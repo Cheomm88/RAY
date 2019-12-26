@@ -7,3 +7,4 @@ Pasamos al desarrollo de aplicaciones multiplataforma para móvil, hasta ahora t
 
 Empezaremos por el "Hola Mundo" y posteriormente iremos trabajando con diferentes prácticas.
 
+[Lista de vídeos sobre Xamarin](https://www.youtube.com/watch?v=PdYYcanyvVo&list=PLpOqH6AE0tNiZ1BoufjFfkBGC_bPBQWfA)
