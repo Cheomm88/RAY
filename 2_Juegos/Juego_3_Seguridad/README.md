@@ -8,25 +8,39 @@ Desarrollar un juego basado en número, en el cuál el jugador deberá descubrir
 
 Ejemplo de la partida:
 > Radio: Tenemos unas pistas sobre el acceso a este sistema.
+>
 > El código está formado por tres dígitos.
+>
 > La suma de estos tres dígitos da 8
+>
 > La multiplicación de los tres dígitos da  16
+>
 > Te dejamos el tiempo que necesites, por favor no falles o toda la operación se irá al traste.
+>
 > Escribe el primer número
+>
 > 2
+>
 > Escribe el segundo número
+>
 >2
 > Escribe el tercer número
+>
 >4
+>
 > ...
+>
 > ...
 > Radio: Uff ha estado cerca!! 
+>
 > Radio: Bien!! Ya queda menos... Vamos a descargar esos datos...
+>
 > Radio: Ups... Están encriptados, esto va a estar más complicado de lo que parecía...
+>
 
 (La historia la puedes modificar como tu quieras, se trata de adivinar los 3 números que hagan que las operaciones funcionen).
 
-El orden de los números de debería afectar puesto que la suma y la multiplicación tienen la propiedad de que el orden de los factores no afecta al resultado final.
+El orden de los números no debería afectar puesto que la suma y la multiplicación tienen la propiedad de que el orden de los factores no afecta al resultado final.
 Por otro lado podría suceder que un problema tenga varias soluciones es por ello que lo que haremos será comprobar que el resultado de las operaciones es el mismo y no los números. El código sería similar al siguiente
 ```csharp
 	Random generadorNumeros = new Random();
@@ -38,7 +52,7 @@ Por otro lado podría suceder que un problema tenga varias soluciones es por ell
 	int userB = Convert.ToInt32(Console.ReadLine());
 	int userC = Convert.ToInt32(Console.ReadLine());
 	
-	if((a + b +c == userA+ userB + userC) && (a + b +c == userA+ userB + userC))
+	if((a + b + c == userA * userB * userC) && (a * b *c == userA * userB * userC))
 	{
 		//Pasar al siguiente nivel....
 	}
