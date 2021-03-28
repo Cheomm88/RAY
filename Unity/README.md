@@ -13,15 +13,16 @@ Las escenas **contienen los objetos de su juego**. Pueden ser usadas para crear 
 Los [GameObjects](https://docs.unity3d.com/Manual/class-GameObject.html) son objetos fundamentales en Unity que representan personajes, props, y el escenario. Estos **no logran nada por sí mismos** pero funcionan como contenedoras para Components, que implementan la verdadera funcionalidad. 
 
 Cuando se selecciona un GameObject en una Escena podremos ver en el inspector la información del GameObject así como sus componentes. La única información que no depende de componentes es la siguiente:
-![Visión de un GameObject en el inspector](/images/GameObjectSceneStatusProperties.png)
+![Visión de un GameObject en el inspector](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GameObjectSceneStatusProperties.png)
 
 - Nombre
 - Estado de activación al desactivar un GameObject este deja de "funcionar" y ser visto.
-![Check box para activar o desactivar GameObject](/images/GOInspectorActiveSetting.png)
+![Check box para activar o desactivar GameObject](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GOInspectorActiveSetting.png)
+
 
 
 - Static: se activa para los objetos que no se mueven, de esta manera Unity puede adelantar cálculos y mejorar el rendimientos.
-![Check box para marcar como estático](/images/GOInspectorStaticSetting.png)
+![Check box para marcar como estático](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GOInspectorStaticSetting.png)
 
 - Tag o Etiqueta: es utilizado para reconocer y buscar objetos de una misma categoría por ejemplo buscar todos los enemigos o powerups. En la siguiente línea de código estaríamos buscando todos los enemigos de una escena.
 ```
@@ -29,7 +30,7 @@ GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 ```
 - Layer o Capa: es similar a la etiqueta pero utilizado por las físicas y el motor de renderizado
 
-![Sección donde modificar el Layer o el Tag de un GameObject](/images/GOInspectorTagsAndLayers.png)
+![Sección donde modificar el Layer o el Tag de un GameObject](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GOInspectorTagsAndLayers.png)
 
 ### Componentes
 
