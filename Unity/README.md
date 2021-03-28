@@ -13,15 +13,19 @@ Las escenas **contienen los objetos de su juego**. Pueden ser usadas para crear 
 Los [GameObjects](https://docs.unity3d.com/Manual/class-GameObject.html) son objetos fundamentales en Unity que representan personajes, props, y el escenario. Estos **no logran nada por sí mismos** pero funcionan como contenedoras para Components, que implementan la verdadera funcionalidad. 
 
 Cuando se selecciona un GameObject en una Escena podremos ver en el inspector la información del GameObject así como sus componentes. La única información que no depende de componentes es la siguiente:
+
 ![Visión de un GameObject en el inspector](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GameObjectSceneStatusProperties.png)
 
-- Nombre
+- Nombre es utilizado para ser buscado por la escena desde Unity o por código. Es importante poner nombres reconocibles.
+
 - Estado de activación al desactivar un GameObject este deja de "funcionar" y ser visto.
+
 ![Check box para activar o desactivar GameObject](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GOInspectorActiveSetting.png)
 
 
 
 - Static: se activa para los objetos que no se mueven, de esta manera Unity puede adelantar cálculos y mejorar el rendimientos.
+
 ![Check box para marcar como estático](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GOInspectorStaticSetting.png)
 
 - Tag o Etiqueta: es utilizado para reconocer y buscar objetos de una misma categoría por ejemplo buscar todos los enemigos o powerups. En la siguiente línea de código estaríamos buscando todos los enemigos de una escena.
@@ -33,6 +37,8 @@ GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 ![Sección donde modificar el Layer o el Tag de un GameObject](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GOInspectorTagsAndLayers.png)
 
 ### Componentes
+Los componentes son los encargados de dar función a los GameObjects, los componentes pueden ser los propios de Unity como el Transform (posición en el espacio, rotación y escala), AudioSource (emisor de sonido), Camera... Y propios creados a través de **Scripts** en C# 
 
 ### Prefabs
+Cuando hemos creado un GameObject podríamos querer que este sea una plantilla para usarlo en muchos apartados o puntos del juego (enemigos, powerups, etc). Como van a tener el mismo comportamiento nos interesa poder modificarlo en la plantilla y extender los cambios a todos los demás.
 
