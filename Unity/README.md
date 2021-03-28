@@ -37,7 +37,9 @@ GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 ![Sección donde modificar el Layer o el Tag de un GameObject](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/GOInspectorTagsAndLayers.png)
 
 ### Componentes
-Los componentes son los encargados de dar función a los GameObjects, los componentes pueden ser los propios de Unity como el Transform (posición en el espacio, rotación y escala), AudioSource (emisor de sonido), Camera... Y propios creados a través de **Scripts** en C# 
+Los componentes son los encargados de dar función a los GameObjects, los componentes pueden ser los propios de Unity como el Transform (posición en el espacio, rotación y escala), AudioSource (emisor de sonido), Camera... Y propios creados a través de **Scripts** en C# .
+
+El nombre de los scripts debe contener solo letras, números y _. Comenzar por una letra siempre y en mayúscula. Lo ideal es utilizar el CamelCase para los nombres. Puedes ver más información sobre nombres en este [repositorio](https://github.com/Cheomm88/unity-clean-code#the-basics)
 
 ### Prefabs
 Cuando hemos creado un GameObject podríamos querer que este sea una plantilla para usarlo en muchos apartados o puntos del juego (enemigos, powerups, etc). Como van a tener el mismo comportamiento nos interesa poder modificarlo en la plantilla y extender los cambios a todos los demás.
