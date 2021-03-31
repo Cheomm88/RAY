@@ -1,8 +1,6 @@
 # Scripts
 Si estás leyendo esta guía, probablemente estés aprendiendo a programar C#, cómo escribir algún script simple y qué cosas no hacer. Al crear tu primer script en Unity te encontrarás con lo siguiente.
 
-v
-
 El código de aquí arriba es la plantilla de un nuevo script en C# de Unity. Podemos dividirlo en varias secciones.
 
 ```csharp
