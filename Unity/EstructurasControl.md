@@ -19,9 +19,188 @@ El signo de exclamación ```!``` es utilizado para negar los valores booleanos, 
 
 > **OJO** :  un error común es utilizar ```=``` en una comparación, esto no va a comparar los valores sino igualarlo. Para comprobar que dos valores son iguales usaremos ```==```
 
+Las comparaciones rara vez las encontrarás sueltas por el código, en el único caso que podrás verlas es para asignar a un booleano un valor, puesto que una comparación dará un valor verdadero o falso.
+
+```csharp
+//El valor de alive será verdadero cuando lifes sea MAYOR que cero.
+bool alive = { lifes > 0 };
+```
+
+Para crear condiciones más complejas podremos combinar condiciones mediante los operadores lógicos And y Or. A la izquierda y a la derecha del operador, deben situarse expresiones que den como resultado un valor booleano. Si se combinan varios operadores lógicos, se pueden utilizar parentesis.
+
+
+|Nombre | Operador | Descripción 
+| AND | ```&&``` | Ambas expresiones (izquierda y derecha) deben dar el mismo resultado
+| OR | ```||``` | El resultado de las expresiones es diferente
+
+
 ## Condiciones
 
+A través de una condición se ejecutará el bloque de código que le siga, en un modo genérico sería algo como:
+
+
+```csharp
+	//Código antes de la condición
+	if(condiciones)
+	{
+		//Código cuando la condición se cumple
+	}
+
+	//Código después de la condición
+```
+Ahora veremos un ejemplo en el que simula un ataque contra un enemigo. 
+
+```csharp
+
+	void Start()
+	{
+			// Datos inicializados
+			float ataqueBase = 6f;
+			float bonus = 1.6f;
+			float ataqueCombo = (ataqueBase + bonus) * 1.75f; 
+			float saludEnemigo = 13.2f;
+
+			//Cuando la condición de eliminar al enemigo se ejecutará el código dentro del bloque/llaves
+			if(ataqueCombo > saludEnemigo)
+			{
+				saludEnemigo = 0.0f;
+				Debug.Log("Enemigo derrotado");
+			}
+
+			//Independientemente del IF esta parte se ejecutará
+			Debug.Log("Fin de ejecución");
+	}
+```
+
+Después del if podemos añadir un bloque ```else``` se ejecutaría cuando la condición no se cumpla.
+
+
+```csharp
+
+	void Start()
+	{
+			// Datos inicializados
+			float ataqueBase = 6f;
+			float bonus = 1.6f;
+			float ataqueCombo = (ataqueBase + bonus) * 1.75f; 
+			float saludEnemigo = 13.2f;
+
+			//Cuando la condición de eliminar al enemigo se ejecutará el código dentro del bloque/llaves
+			if(ataqueCombo > saludEnemigo)
+			{
+				saludEnemigo = 0.0f;
+				Debug.Log("Enemigo derrotado");
+			}
+			else
+			{
+				//Esto se ejecuta cuando la condición superior no se cumple.
+				saludEnemigo -= ataqueCombo;
+				Debug.Log("El enemigo ha recibido " + ataqueCombo + " de daño");
+			}
+
+			//Independientemente del IF esta parte se ejecutará
+			Debug.Log("Fin de ejecución");
+	}
+```
+Por último en los else podemos añadir un if generando ```else if (condiciones)```
+
+
+```csharp
+
+	void Start()
+	{
+			// Datos inicializados
+			float ataqueBase = 6f;
+			float bonus = 1.6f;
+			float saludEnemigo = 13.2f;
+
+			//Cuando la condición de eliminar al enemigo se ejecutará el código dentro del bloque/llaves
+			if(ataqueBase > saludEnemigo)
+			{
+				saludEnemigo = 0.0f;
+				Debug.Log("Enemigo derrotado");
+			}
+			else if((ataqueBase + bonus) > saludEnemigo)
+			{
+				saludEnemigo = 0.0f;
+				Debug.Log("Enemigo derrotado utilizando un ataque con bonus");
+			}
+			else
+			{
+				//Esto se ejecuta cuando ninguna condición superior no se cumple.
+				saludEnemigo -= (ataqueBase + bonus);
+				Debug.Log("El enemigo ha recibido " + (ataqueBase + bonus) + " de daño.");
+			}
+			//Independientemente del IF esta parte se ejecutará
+			Debug.Log("Fin de ejecución");
+	}
+```
+> Importante
+- Solo el bloque ```if``` es imprescindible. Además siempre será el primero.
+- Pueden haber tantos bloques ```else if (condiciones)``` como necesites. (No es obligatorio utilizarlo siempre)
+- El bloque  ```else``` siempre será el último y no lleva condición. (Nuevamente no es obligatorio.)
+- Recuerda que solo se ejecutará uno de los bloques. Es decir, desde que una de las condiciones se cumplan el resto no se ejecutarán.
+
+>Nota
+> Pueden existir más instrucciones condicionales dentro de un if u otra estructura de control
+
+Puedes ver más ejemplos en la [web oficial de Unity](https://learn.unity.com/tutorial/if-statements-1?uv=2019.3&projectId=5dc4a877edbc2a00205e1124)
+
 ## Bucles
+
+Es una secuencia que ejecuta repetidas veces un bloque de código, hasta que la condición asignada a dicho bucle deja de cumplirse. Puedes ver más ejemplos en la [web oficial de Unity](https://learn.unity.com/tutorial/bucles-xu?language=es&projectId=5dc4a877edbc2a00205e1124#)
+
+### Bucle while
+
+Repite un código hasta que se cumple una condición. Por ejemplo
+
+```csharp
+
+	int vida = 25;
+	int ataqueRecibido = 5;
+	while(vida > 0)
+	{
+		Debug.Log("Recibe un ataque que resta  " + ataqueRecibido + " vida ");
+		vida -= ataqueRecibido;
+	}
+
+	Debug.Log("Vida agotada, personaje ha muerto");
+
+```
+
+Otra versión de este bucle es el ```do while``` el funcionamiento es similar, sólo que su condición se comprueba tras una primera ejecución del código del bloque. Es decir, siempre se ejecutará una vez.
+
+```csharp
+	int vida = 25;
+	int ataqueRecibido = 5;
+	do
+	{
+		Debug.Log("Recibe un ataque que resta  " + ataqueRecibido + " vida ");
+		vida -= ataqueRecibido;
+	}while(vida > 0)
+
+	Debug.Log("Vida agotada, personaje ha muerto");
+```
+
+Encontramos una serie de pautas reconocibles para cualquier bucle que veamos en un futuro:
+- Existen una condiciones iniciales. 
+- La condición de repetición del bucle implica observar cambios entre esas condiciones iniciales: por ejemplo, comprobar si la variables ha superado un límite.
+- Dentro del bucle se pueden modificar variables y por tanto las condiciones para salir del mismo. Pudiendo incrementar o decrementar valores.
+
+En el bucle ```for``` encontraremos todas estas características en una sola línea
+
+### Bucle for
+
+Utilizado generalmente para recorrer arrays o repetir operaciones tantas veces como se quiera.
+
+```csharp
+	
+	//Empieza en Cero podría empezar en el número que quieras y acabar en el que tú quieras, en este caso va del 0 al 4 (el cinco no se incluye puesto que es menor estricto)...
+	for(int i=0;i<5;i++) { 
+	Console.WriteLine("Estoy repitiendo esto " + i + " veces");
+	}
+```
+
 
 ## Arrays
 
