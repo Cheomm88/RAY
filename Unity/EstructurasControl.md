@@ -203,7 +203,123 @@ Utilizado generalmente para recorrer arrays o repetir operaciones tantas veces c
 	}
 ```
 
+Como puedes observar tras la palabra for, hay tres partes separadas por un punto y coma:
+- La primera es una instrucción que se ejecuta una sola vez, justo antes de iniciar el bucle.
+- La siguiente es la condición que se debe cumplir para que el bucle se pare.
+- La tercera parte es la instrucción que se ejecuta al final de cada repetición. Al ser una instrucción realmente podríamos poner "cualquier cosa" por ejemplo ```vida += 3```
+
 
 ## Arrays
+Son colecciones de elementos iguales, con acceso posicional. Estos elementos pueden ser números, textos, o incluso datos definidos por el desarrollador.
+
+> La primera posición de un array siempre será el 0.
+
+```csharp
+	//Crea un array llamado arrayInt con 3 elementos.
+	string[] equipos = new string[3];
+	//En la primera posición (0) almaceno CD Tenerife
+	equipo[0] = "CD Tenerife";
+	equipo[1] = "Atlético de Madrid";
+	equipo[2] = "CB Canarias";
+
+	// Otro modo de rellenarlo
+	string[] equipos2 = new string[] {"CD Tenerife", "Atlético de Madrid", "CB Canarias"};
+
+	//Podría cambiar el valor de un equipo de la siguiente manera
+	//Primero va la variable que quiero acceder, luego va la posición dentro del array "[2]" y finalmente hago una asignación.
+	equipos2[2] = "UD Las Palmas";
+
+	//Para mostrar, acceder, modificar... todos los elementos lo más habitual es utilizar un bucle for
+
+	for(int i = 0; i < equipo.Lenght;i++)
+	{
+		Debug.Log("Equipo [" + i + "] = " + equipo[i]);
+	}
+
+```
 
 ## Funciones
+Una función es un bloque de código que se puede llamar desde otros lugares del programa. En Unity al crear un Script encontramos dos funciones `Start` y `Update`. Unity se encarga de realizar las llamadas a dichas funciones. Pero tu puedes crear nuevas funciones propias o implementar otras que Unity tiene preparadas para tí como detectar colisiones.
+
+Vamos a crear una función de ejemplo
+
+```csharp
+
+	//Función creada por Unity
+	void Start()
+	{
+		//LLamo a mi función
+		HolaMundo();
+		//...pasan más cosas...
+		//...
+		//...
+		//...
+		//Lamo de nuevo
+		HolaMundo();
+	}
+
+	//Mi función
+
+	void HolaMundo()
+	{
+
+		Debug.Log("Hola Mundo");
+
+	}
+
+```
+
+Dentro del script es indiferente donde están creadas las funciones, lo que importa es cuando son llamadas. A la hora de crearla encontramos
+- La palabra void, que indica que la función no devuelve ningún resultado.
+- El nombre de la función `HolaMundo`. Debemos mantener ciertas [reglas a la hora de elegir nombre](https://github.com/Cheomm88/unity-clean-code/blob/master/README.md#methods)
+- Los paréntesis están vacíos. Esto implica que la función no tiene parámetros, pero siempre debemos poner dichos paréntesis.
+- Las llaves indican el inicio y el final de nuestra función.
+- Entre las llaves encontramos el código que se ejecutará al ser llamada la función en este caso simplemente mostrará en el Log un texto que diga "Hola Mundo"
+
+Las funciones pueden recibir parámetros como es el caso de `Debug.Log("Hola Mundo")` donde vemos que ponemos el texto que va a ser mostrado. En nuestro ejemplo vamos a calcular la velocidad, para ello es importante recordar que velocidad = espacio recorrido / tiempo.
+
+Necesitamos la información de espacio recorrido y tiempo, estos serán los parámetros y nuestra función además devolverá la velocidad.
+
+```csharp
+
+	//Función creada por Unity
+	float CalcularVelocidad(float espacioRecorrido, float tiempoNecesario)
+	{
+		float velocidad = espacioRecorrido / tiempoNecesario;
+		return velocidad;
+	}
+
+```
+
+En esta ocasión podemos observar que:
+- La función devuelve un valor por lo que no es void, así que se pone el tipo de dato que devuelve antes que el nombre en este caso es `float`.
+- Tras el nombre dentro de los paréntesis encontramos los parámetros estos pueden ser de cualquier tipo de dato, en nuestro ejemplo son dos floats por lo que pone float delante de cada uno y van separados por una coma.
+- La función al no ser void, **siempre** debe devolver un dato del tipo que le hemos indicado delante del nombre en este caso `float`. Para que devuelva un valor ponemos `return` y el dato que debe devolver.
+
+Para utilizar nuestra función podemos hacerlo ahora en el `Start`
+```csharp
+
+	void Start()
+	{
+
+		//Almaceno el valor y lo muestro
+		float velocidad = CalcularVelocidad(100, 9.4f);
+		Debug.Log("La velocidad es de " + velocidad + "m/s");
+
+		//También puedo usar el valor directamente
+		Debug.Log("La velocidad es de " + CalcularVelocidad(100, 9.4f) + "m/s");
+
+		//O usarlo para otros fines por ejemplo calcular la media de velocidad de dos tiempos en un circuito
+		float mediaVelocidad = (CalcularVelocidad(100, 9.8f) + CalcularVelocidad(100, 9.2f)) / 2.0f;
+		Debug.Log("La velocidad media es de " + mediaVelocidad + "m/s");
+
+
+	}
+	//Función creada por Unity
+	float CalcularVelocidad(float espacioRecorrido, float tiempoNecesario)
+	{
+		float velocidad = espacioRecorrido / tiempoNecesario;
+		return velocidad;
+	}
+
+```
