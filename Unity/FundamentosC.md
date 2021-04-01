@@ -22,6 +22,7 @@ Durante el desarrollo de aplicaciones encontraremos información o datos con los
 Con esta declaración hemos creado una variable llamada _monedas_. La palabra ```int```, que precede al nombre indica el tipo de dato o variable, en este caso es de tipo entero (**int**eger) y es uno de los muchos que existen predifinidos en C# y Unity. A continuación tenemos una tabla de tipos de datos básicos de C#.
 
 Tipo | Contenido | Valores posibles
+------ | -------  | ----------
 bool | Sólo puede tener dos valores verdadero o falso. Un tipo de dato importante para entender como se evalúan las condiciones | true - false
 int | Números enteros de 32 bits positivos y negativos | -2.147.483.648 .... -1, 0, +1, +2.147.483.647
 long | Números enteros de 64 bits positivos y negativos | -9.223.372.036.854.775.808 .... -1, 0, +1, +9.223.372.036.854.775.807
