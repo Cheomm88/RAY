@@ -7,13 +7,14 @@ Antes de empezar a trabajar con las estructuras de control, es importante conoce
 
 Una comparación constará de dos expresiones separadas por un Operador, estos son los operadores de comparación que utilizaremos. 
 
-| Operador | Descripción 
-| == | Ambas expresiones (izquierda y derecha) deben dar el mismo resultado
-| != | El resultado de las expresiones es diferente
-| < | El resultado de la expresión de la izquierda debe ser menor que el de la derecha
-| > | El resultado de la expresión de la izquierda debe ser mayor que el de la derecha
-| <= | El resultado de la expresión de la izquierda debe ser menor o igual que el de la derecha
-| >= | El resultado de la expresión de la izquierda debe ser mayor o igual que el de la derecha
+ | Operador | Descripción |
+ | ------------- | ------------- |
+ | == | Ambas expresiones (izquierda y derecha) deben dar el mismo resultado |
+ | != | El resultado de las expresiones es diferente |
+ | < | El resultado de la expresión de la izquierda debe ser menor que el de la derecha |
+ | > | El resultado de la expresión de la izquierda debe ser mayor que el de la derecha |
+ | <= | El resultado de la expresión de la izquierda debe ser menor o igual que el de la derecha |
+ | >= | El resultado de la expresión de la izquierda debe ser mayor o igual que el de la derecha |
 
 El signo de exclamación ```!``` es utilizado para negar los valores booleanos, por lo que si lo ponemos delante de una expresión booleana lo convierte en lo cotrario. Algo que sea verdadero al ponerle ! delante será falso, y viceversa.
 
@@ -29,9 +30,10 @@ bool alive = { lifes > 0 };
 Para crear condiciones más complejas podremos combinar condiciones mediante los operadores lógicos And y Or. A la izquierda y a la derecha del operador, deben situarse expresiones que den como resultado un valor booleano. Si se combinan varios operadores lógicos, se pueden utilizar parentesis.
 
 
-|Nombre | Operador | Descripción 
-| AND | ```&&``` | Ambas expresiones (izquierda y derecha) deben dar el mismo resultado
-| OR | ```||``` | El resultado de las expresiones es diferente
+| Nombre | Operador | Descripción |
+| ------------- | ------------- |  -------------  |
+| AND | `&&` | Ambas expresiones (izquierda y derecha) deben dar el mismo resultado |
+| OR | ![OR](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/or.png) | Es verdadero si una delas dos expresiones es verdadera |
 
 
 ## Condiciones
