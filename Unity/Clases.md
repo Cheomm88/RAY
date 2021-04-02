@@ -93,6 +93,8 @@ Si lo que queremos es trabajar con un nuevo objeto tendremos que usar `new Nombr
 ```csharp
     void Start()
     {
+
+        //Creamos un NUEVO objeto
         Transport myTransport = new Transport();
         myTransport.name = "Civic Type-R";
         myTransport.SetSpeed(145.5f);
@@ -100,22 +102,53 @@ Si lo que queremos es trabajar con un nuevo objeto tendremos que usar `new Nombr
         myTransport.boost = 3.0f;
 
 
+
         myTransport.Mostrar();
         myTransport.ApplyBost();
         myTransport.Mostrar();
         
     
+        //Creamos una REFERENCIA a un objeto
         Transport otherTransport;
+        //Decidimos la referencia 
         otherTransport = myTransport;
+        //Hacemos cambios en la REFERENCIA
         otherTransport.name = "Otro vehículo";
-
-
+        //Vemos cambios en REFERENCIA
         otherTransport.Mostrar();
-
+        //Que también se aplican en el objeto original.
+        myTransport.Mostrar();
+        //Esto es porque están accediendo los dos al mismo dato en la memoria
 
     }
 ```
 
+Si te fijas al crear un Script en Unity encontrarás lo siguiente
 
+```csharp
+
+public class MiScript : MonoBehaviour {
+
+```
+Al encontrarte con `: MonoBehaviour` significa que nuestro script hereda de la clase MonoBehaviour, por lo que tendrá elementos de esta clase que ha sido creada por los desarrolladores de Unity. Es por ello que tenemos acceso al Start, Update o sistemas de colisiones.
+
+Podríamos crear una clase hjija de Transport para ello podemos hacer lo siguiente
+
+```csharp
+    public class Avion : Transport
+    {
+        public float altura;
+        pubic int pasajeros;
+    }
+```
+Esta nueva clase tendrá las características de Transport como velocidad, aceleración o nombre y esto es gracias a `: Transport`.
 
 ## Miembros estáticos
+
+Todo lo que hemos definido hasta ahora (variables/atributos y funciones/métodos) serán definidos para cada objeto de la clase. Es posibble crear variables y funciones definidas para la clase en sí, en lugar de lsus instancias. Por ejemplo se podría tener un límite de velocidad igual para cualquier vehículo.
+
+`public static float speedLimit = 120.0f`
+
+De este modo todos los transportes tendrán esa limitación podrías modificar el valor en una instancia y se cambiará en todos.
+
+`myTransport.speedLimit = 80.0f`
