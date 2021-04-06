@@ -32,7 +32,7 @@ Para crear condiciones más complejas podremos combinar condiciones mediante los
 
 | Nombre | Operador | Descripción |
 | ------------- | ------------- |  -------------  |
-| AND | `&&` | Ambas expresiones (izquierda y derecha) deben dar el mismo resultado |
+| AND | `&&` | Ambas expresiones (izquierda y derecha) deben ser verdadero |
 | OR | ![OR](https://raw.githubusercontent.com/Cheomm88/RAY/master/Unity/images/or.png) | Es verdadero si una delas dos expresiones es verdadera |
 
 
