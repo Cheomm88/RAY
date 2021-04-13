@@ -152,3 +152,49 @@ Todo lo que hemos definido hasta ahora (variables/atributos y funciones/métodos
 De este modo todos los transportes tendrán esa limitación podrías modificar el valor en una instancia y se cambiará en todos.
 
 `myTransport.speedLimit = 80.0f`
+
+Una de las utilidades qeu encontraremos de los miembros estáticos es crear lo que se denomina Singleton, es una práctica que permite tener una clase que gestione información de manera centralizada. Esto puede tener sus aspectos negativos en caso de que apliquemos esta práctica de manera habitual en nuestro proyecto. Puede ser muy útil en nuestros juegos para gestionar puntos, monedas...
+
+El siguiente ejemplo es un singleton utilizado para controlar los puntos. Desde cualquier script podremos añadir puntos utilizando la función de la clase `PointsManager.Instance.AddPoints(CantidadPuntos);` por otro lado podremos obtener los puntos actuales con `PointsManager.Instance.Points;`
+
+```csharp 
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    //La clase se llama PointsManager
+    public class PointsManager : MonoBehaviour
+    {
+        //Miembro estático que nadie podrá acceder, sirve como seguridad.
+        //Es del mismo tipo de dato que la clase
+        private static PointsManager _instance;
+
+        //Miembro público que puede ser accedido desde cualquier script usando PointsManager.Instance.LoQueQuieroDeLaClase();
+        public static PointsManager Instance { get { return _instance; } }
+
+        //Los puntos son privados nadie puede acceder a ellos de manera directa para modificarlos.
+        private int _points;
+        //A través de esta referencia pueden ser accedidos
+        public int Points { get { return _points; } }
+
+        void Awake()
+        {
+            if (_instance == null)
+            {
+                _instance = this;
+            }
+            else {
+                Destroy(this.gameObject);
+            }
+        }
+
+        /// <summary>
+        /// Añade puntos.
+        /// </summary>
+        /// <param name="amount">Cantidad de puntos que se van a añadir</param>
+        public void AddPoints(int amount)
+        {
+            _points += amount;
+        }
+    }
+```
