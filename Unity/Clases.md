@@ -24,8 +24,8 @@ A continuación vamos a crear una clase desde cero, por lo que debes crear un sc
 
 
         //Los atributos son en cierto modo datos o variables. Estos pueden ser protected, public o privadas.
-        //Protegidas esta clase y sus hijas pueden usarlas.
-        
+        //protected esta clase y sus hijas pueden usarlas.
+        //private solo la propia clase puede acceder a ellas.
         //Pueden ser public es decir cualquier otra clase podría modificarlas y leerlas
         public string name;
         public float boost = 2.0f;
