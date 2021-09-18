@@ -1,6 +1,93 @@
 # Estructuras de control
 Un programa se ejecuta línea a línea, de manera secuencial. Esto es así hasta llegar al final de código que se está ejecutando. Este avance lineal se altera cuando se llega a una estructura de control. Se trata de un mecanismo que el hace que el programa pueda ir por un camino y otro dependendiendo de ciertas condiciones.
 
+## Funciones
+Una función es un bloque de código que se puede llamar desde otros lugares del programa. En Unity al crear un Script encontramos dos funciones `Start` y `Update`. Unity se encarga de realizar las llamadas a dichas funciones. Pero tu puedes crear nuevas funciones propias o implementar otras que Unity tiene preparadas para tí como detectar colisiones.
+
+Vamos a crear una función de ejemplo
+
+```csharp
+
+	//Función creada por Unity
+	void Start()
+	{
+		//LLamo a mi función
+		HolaMundo();
+		//...pasan más cosas...
+		//...
+		//...
+		//...
+		//Lamo de nuevo
+		HolaMundo();
+	}
+
+	//Mi función
+
+	void HolaMundo()
+	{
+
+		Debug.Log("Hola Mundo");
+
+	}
+
+```
+
+Dentro del script es indiferente donde están creadas las funciones, lo que importa es cuando son llamadas. A la hora de crearla encontramos
+- La palabra void, que indica que la función no devuelve ningún resultado.
+- El nombre de la función `HolaMundo`. Debemos mantener ciertas [reglas a la hora de elegir nombre](https://github.com/Cheomm88/unity-clean-code/blob/master/README.md#methods)
+- Los paréntesis están vacíos. Esto implica que la función no tiene parámetros, pero siempre debemos poner dichos paréntesis.
+- Las llaves indican el inicio y el final de nuestra función.
+- Entre las llaves encontramos el código que se ejecutará al ser llamada la función en este caso simplemente mostrará en el Log un texto que diga "Hola Mundo"
+
+Las funciones pueden recibir parámetros como es el caso de `Debug.Log("Hola Mundo")` donde vemos que ponemos el texto que va a ser mostrado. En nuestro ejemplo vamos a calcular la velocidad, para ello es importante recordar que velocidad = espacio recorrido / tiempo.
+
+Necesitamos la información de espacio recorrido y tiempo, estos serán los parámetros y nuestra función además devolverá la velocidad.
+
+```csharp
+
+	//Función creada por Unity
+	float CalcularVelocidad(float espacioRecorrido, float tiempoNecesario)
+	{
+		float velocidad = espacioRecorrido / tiempoNecesario;
+		return velocidad;
+	}
+
+```
+
+En esta ocasión podemos observar que:
+- La función devuelve un valor por lo que no es void, así que se pone el tipo de dato que devuelve antes que el nombre en este caso es `float`.
+- Tras el nombre dentro de los paréntesis encontramos los parámetros estos pueden ser de cualquier tipo de dato, en nuestro ejemplo son dos floats por lo que pone float delante de cada uno y van separados por una coma.
+- La función al no ser void, **siempre** debe devolver un dato del tipo que le hemos indicado delante del nombre en este caso `float`. Para que devuelva un valor ponemos `return` y el dato que debe devolver.
+
+Para utilizar nuestra función podemos hacerlo ahora en el `Start`
+```csharp
+
+	void Start()
+	{
+
+		//Almaceno el valor y lo muestro
+		float velocidad = CalcularVelocidad(100, 9.4f);
+		Debug.Log("La velocidad es de " + velocidad + "m/s");
+
+		//También puedo usar el valor directamente
+		Debug.Log("La velocidad es de " + CalcularVelocidad(100, 9.4f) + "m/s");
+
+		//O usarlo para otros fines por ejemplo calcular la media de velocidad de dos tiempos en un circuito
+		float mediaVelocidad = (CalcularVelocidad(100, 9.8f) + CalcularVelocidad(100, 9.2f)) / 2.0f;
+		Debug.Log("La velocidad media es de " + mediaVelocidad + "m/s");
+
+
+	}
+	//Función creada por Unity
+	float CalcularVelocidad(float espacioRecorrido, float tiempoNecesario)
+	{
+		float velocidad = espacioRecorrido / tiempoNecesario;
+		return velocidad;
+	}
+
+```
+
+
 ## Comparaciones
 
 Antes de empezar a trabajar con las estructuras de control, es importante conocer las operaciones de comparación ya que son importantes para establecer las condiciones que determinarán la ejecución de nuestros programas.
@@ -238,88 +325,4 @@ Son colecciones de elementos iguales, con acceso posicional. Estos elementos pue
 
 ```
 
-## Funciones
-Una función es un bloque de código que se puede llamar desde otros lugares del programa. En Unity al crear un Script encontramos dos funciones `Start` y `Update`. Unity se encarga de realizar las llamadas a dichas funciones. Pero tu puedes crear nuevas funciones propias o implementar otras que Unity tiene preparadas para tí como detectar colisiones.
 
-Vamos a crear una función de ejemplo
-
-```csharp
-
-	//Función creada por Unity
-	void Start()
-	{
-		//LLamo a mi función
-		HolaMundo();
-		//...pasan más cosas...
-		//...
-		//...
-		//...
-		//Lamo de nuevo
-		HolaMundo();
-	}
-
-	//Mi función
-
-	void HolaMundo()
-	{
-
-		Debug.Log("Hola Mundo");
-
-	}
-
-```
-
-Dentro del script es indiferente donde están creadas las funciones, lo que importa es cuando son llamadas. A la hora de crearla encontramos
-- La palabra void, que indica que la función no devuelve ningún resultado.
-- El nombre de la función `HolaMundo`. Debemos mantener ciertas [reglas a la hora de elegir nombre](https://github.com/Cheomm88/unity-clean-code/blob/master/README.md#methods)
-- Los paréntesis están vacíos. Esto implica que la función no tiene parámetros, pero siempre debemos poner dichos paréntesis.
-- Las llaves indican el inicio y el final de nuestra función.
-- Entre las llaves encontramos el código que se ejecutará al ser llamada la función en este caso simplemente mostrará en el Log un texto que diga "Hola Mundo"
-
-Las funciones pueden recibir parámetros como es el caso de `Debug.Log("Hola Mundo")` donde vemos que ponemos el texto que va a ser mostrado. En nuestro ejemplo vamos a calcular la velocidad, para ello es importante recordar que velocidad = espacio recorrido / tiempo.
-
-Necesitamos la información de espacio recorrido y tiempo, estos serán los parámetros y nuestra función además devolverá la velocidad.
-
-```csharp
-
-	//Función creada por Unity
-	float CalcularVelocidad(float espacioRecorrido, float tiempoNecesario)
-	{
-		float velocidad = espacioRecorrido / tiempoNecesario;
-		return velocidad;
-	}
-
-```
-
-En esta ocasión podemos observar que:
-- La función devuelve un valor por lo que no es void, así que se pone el tipo de dato que devuelve antes que el nombre en este caso es `float`.
-- Tras el nombre dentro de los paréntesis encontramos los parámetros estos pueden ser de cualquier tipo de dato, en nuestro ejemplo son dos floats por lo que pone float delante de cada uno y van separados por una coma.
-- La función al no ser void, **siempre** debe devolver un dato del tipo que le hemos indicado delante del nombre en este caso `float`. Para que devuelva un valor ponemos `return` y el dato que debe devolver.
-
-Para utilizar nuestra función podemos hacerlo ahora en el `Start`
-```csharp
-
-	void Start()
-	{
-
-		//Almaceno el valor y lo muestro
-		float velocidad = CalcularVelocidad(100, 9.4f);
-		Debug.Log("La velocidad es de " + velocidad + "m/s");
-
-		//También puedo usar el valor directamente
-		Debug.Log("La velocidad es de " + CalcularVelocidad(100, 9.4f) + "m/s");
-
-		//O usarlo para otros fines por ejemplo calcular la media de velocidad de dos tiempos en un circuito
-		float mediaVelocidad = (CalcularVelocidad(100, 9.8f) + CalcularVelocidad(100, 9.2f)) / 2.0f;
-		Debug.Log("La velocidad media es de " + mediaVelocidad + "m/s");
-
-
-	}
-	//Función creada por Unity
-	float CalcularVelocidad(float espacioRecorrido, float tiempoNecesario)
-	{
-		float velocidad = espacioRecorrido / tiempoNecesario;
-		return velocidad;
-	}
-
-```
